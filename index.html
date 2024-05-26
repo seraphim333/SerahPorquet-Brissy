@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ethereal Escapes - Your dream travel destination">
+    <title>Ethereal Escapes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap');
+
+        .ml2 {
+            font-weight: 500;
+            font-size: 2.5em;
+        }
+
+        .ml2 .letter {
+            display: inline-block;
+            line-height: 1em;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffefdb;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6f61;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Pacifico', cursive;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #FF5722;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            background-image: url('https://i.pinimg.com/564x/64/75/0c/64750cb75b4686ef663abd1ffc18a3fc.jpg'); <!-- image -->
+            background-size: cover;
+            color: #fff;
+            padding: 4rem 2rem;
+        }
+
+        button {
+            background-color: #f8b400;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #social-media {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        #social-media ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        #social-media a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+    
+    <h1 class="ml2">The Escape starts now!</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script> 
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml2');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml2 .letter',
+                scale: [4,1],
+                opacity: [0,100],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 950,
+                delay: (el, i) => 70*i
+            }).add({
+                targets: '.ml2',
+                opacity: 50,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script> 
+</head>
+<body>
+    <header>
+        <h2 class="logo">Ethereal Escapes</h2>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <h2>Discover Your Dream Destination</h2>
+            <p>Experience the ethereal beauty of exotic locations.</p>
+            <button onclick="scrollToSection('destinations')">Explore Now</button>
+        </section>
+        <section id="about">
+            <h3>About Us</h3>
+            <p>Ethereal Escapes is a travel agency dedicated to providing unforgettable travel experiences. Founded by a group of travel enthusiasts, our mission is to bring you closer to the world's most beautiful destinations with comfort and style.
+
+With years of experience in the travel industry, we know what it takes to create the perfect getaway. Our team of experts crafts unique travel packages tailored to your specific needs and preferences. Whether you're seeking a relaxing beach vacation, an adventurous mountain trek, or an immersive cultural experience, we have you covered.
+
+</p>
+        </section>
+        <section id="destinations">
+            <h3>Destinations</h3>
+            <p>We offer a variety of travel packages to exotic destinations, including tropical islands, mountain retreats, and cultural hotspots. Our destinations are carefully selected to provide you with a diverse range of experiences, from serene beaches to bustling cities and everything in between.
+<div> 
+    <ul>
+        <li><strong>Tropical Islands:</strong> Enjoy the sun, sand, and sea on some of the world's most beautiful beaches. Relax in luxurious resorts, explore vibrant coral reefs, and experience the laid-back island lifestyle.</li>
+        <li><strong>Mountain Retreats:</strong> Escape to the tranquility of the mountains. Whether you enjoy hiking, skiing, or simply admiring breathtaking views, our mountain retreats offer something for everyone.</li>
+        <li><strong>Cultural Hotspots:</strong> Immerse yourself in the rich history and culture of our destinations. Visit ancient landmarks, savor local cuisine, and participate in festivals and cultural events.</li>
+    </ul>
+        </section>
+        <section id="services">
+            <h3>Services</h3>
+            <p>Our services are designed to provide you with a worry-free and enjoyable travel experience. Here's what we offer:
+
+    <ul>
+        <li><strong>Customized Travel Itineraries:</strong> We work with you to create personalized travel plans that match your interests, schedule, and budget. From flights and accommodations to activities and meals, we handle it all.</li>
+        <li><strong>Guided Tours:</strong> Explore your destination with the help of our knowledgeable and friendly guides. Our tours are designed to give you an insider's perspective on the places you visit, ensuring you don't miss any must-see sites.</li>
+        <li><strong>24/7 Customer Support:</strong> We are here to assist you at any time, day or night. Whether you need help with a booking, have a question about your itinerary, or encounter an issue during your trip, our support team is just a call or message away.</li>
+        <li><strong>Travel Insurance:</strong> Travel with peace of mind knowing you are covered. We offer comprehensive travel insurance plans that protect you against unforeseen events such as trip cancellations, medical emergencies, and lost luggage.</li>
+    </ul>
+        </section>
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <p>If you have any questions or would like to book a trip, please contact us via email at <a href="mailto:info@etherealescapes.com">info@etherealescapes.com</a> or call us at (123) 456-7890.</p>
+        </section>
+        <section id="gallery">
+            <h3>Gallery</h3>
+            <p>Check out our gallery to see some of the breathtaking destinations our clients have visited.</p>
+            <div>
+                <img src="https://i.pinimg.com/736x/6e/cd/4d/6ecd4d7e8c13c593fa7948b09f003457.jpg" alt="Beach"> <!-- image -->
+                <img src="https://i.pinimg.com/564x/17/8f/4e/178f4e3e32ddf292b4d4d0eb9b0a417e.jpg" alt="Mountain"> <!-- image -->
+                <img src="https://i.pinimg.com/564x/10/3f/a3/103fa32a398e8eac3d0b7abbacc1cdd5.jpg" alt="City"> <!-- image -->
+            </div>
+        </section>
+        <section id="social-media">
+            <h3>Follow us on social media for the latest updates and travel inspiration ! </h3>
+            <ul>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://snapchat.com" target="_blank">Snapchat</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ethereal Escapes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
